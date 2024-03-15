@@ -1,0 +1,1 @@
+sudo nmap -sn 10.12.0.0/16 > hq-ip-scan.txt
