@@ -13,3 +13,6 @@ A script that looks for snapshots created for an ami (using the description), th
 
 ## unused_sg
 Find unused security groups in AWS
+
+## ri_details
+Get details about account's reserved instances
