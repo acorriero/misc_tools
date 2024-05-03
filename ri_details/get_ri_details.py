@@ -108,10 +108,9 @@ def sort_dri(dri):
     return sorted_dri
 
 
-def create_csv():
+def create_csv(sorted_dri):
     with open("ri_details.csv", "w") as f:
         f.write("Platform,Instance Type,Count,Units,Family,Total Units\n")
-        sorted_dri = sort_dri(describe_reserved_instances())
         for i in sorted_dri:
             for j in sorted_dri[i]:
                 f.write(
@@ -120,9 +119,9 @@ def create_csv():
 
 
 if __name__ == "__main__":
-    create_csv()
     sorted_dri = sort_dri(describe_reserved_instances())
-
+    create_csv(sorted_dri)
+    
     for i in sorted_dri:
         print(i)
         for j in sorted_dri[i]:

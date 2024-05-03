@@ -91,10 +91,9 @@ def describe_instance_types():
     return instance_data
 
 
-def create_csv():
+def create_csv(instance_data):
     with open("instance_data.csv", "w") as file:
         file.write("Platform,Instance Type,Count,Units,Family,Total Units\n")
-        instance_data = describe_instance_types()
         for platform in instance_data:
             for instance_type in instance_data[platform]:
                 file.write(
@@ -103,8 +102,9 @@ def create_csv():
 
 
 if __name__ == "__main__":
-    create_csv()
     instance_data = describe_instance_types()
+    create_csv(instance_data)
+    
     for i in instance_data:
         print(i)
         for j in instance_data[i]:
