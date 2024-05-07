@@ -1,4 +1,4 @@
-ip-scan.csv
+*.csv
 hq-ip-scan.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
