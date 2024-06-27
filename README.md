@@ -16,3 +16,6 @@ Find unused security groups in AWS
 
 ## ri_details
 Get details about account's reserved instances
+
+## access_keys_info
+Get details about users's access keys
